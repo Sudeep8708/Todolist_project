@@ -7,7 +7,7 @@ Attempted to build this without using any kind of front-end frameworks.
 
 # Features:
 
--> **Specify a Title** and **Description** for your Task to give you a clear insight of what you do you really want to do.
+-> **Specify a Title** and **Description** for your Task to give you a clear insight of what do you really want to do.
 
 -> You have **Priorities** to prioritize each and every task.
 
