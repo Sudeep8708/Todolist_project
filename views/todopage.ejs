@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A TODO Application</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel = 'stylesheet' href = 'design.css' type = 'text/css'>
+    </head>
+
+  <body>
+    <nav class="navbar">
+      <div>
+        <span style="font-size: 25px; color: white; font-weight: bold">TODO</span>
+          <span style="font-size: 25px; color: orange; font-weight: bold">List</span>
+      </div>
+      <div>
+        <ul>
+          <li><a class="listelem" >The Overall List</a></li>
+          <li><a class="listelem" >About Me!</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="main-container">
+
+      <div class="container">
+       <form action = '/' method = 'POST'>
+        <label for="title" style = 'font-weight:500;font-size:25px;'>Title: </label><br>
+        <input type="text"  id="title" name="title" placeholder =" Enter a title for your task.."/><br />
+
+        <label for="task" style = 'font-weight:500;font-size:25px;'>Description: </label><br />
+        <input type="text"  id="task" name="task" placeholder=" Enter your Tasks Here..." /><br>
+        
+        <label for = "imp" style = 'font-weight:420;margin:0'>Select a Label to Prioritize: </label>
+      <input list = "prior" name = "imp"  style = 'padding:10px;width:100px;margin-top:4px;' value = 'Priority1'>
+          <datalist id = "prior" autocomplete="on">
+            <option value = "Priority1"></option>
+            <option value = "Priority2"></option>
+            <option value = "Priority3"></option>
+            <option value = "Priority4"></option>
+          </datalist>
+        
+        <div style = 'text-align:center;margin:14px;'>
+          <input type = 'submit' class = 'add'><br />
+        </div>
+       </form>
+      </div>
+
+      <!-- Here comes the list created !-->
+
+      <div class="list">
+        <h2 style = 'display:inline'>The List</h2><p style = 'display:inline;float:right;font-size:20px;'>Still <span style = 'font-size:25px;' id = 'num'><%=len%></span> tasks remaining</p>
+        <br><br><span id ='sortprior'>Sort By Priority</span><br />
+
+        <div class="tabletitle">
+          <span>Title</span>
+          <span>Description</span>
+        </div>
+        <br />
+        <hr />
+        <br />
+          <% mes.forEach( function(docm) { %>
+            <div class = "elem">
+              <div class='priority' id = <%=docm.priority%> ></div>
+               <input type = 'checkbox'> 
+                <p class="title">  <%=docm.title%></p>
+                <p class="description"> <%=docm.description%></p>
+            </div>
+            <% }); %>
+      </div>
+
+    </div>
+    <div class = 'modal'>
+
+      <div class = 'modal-content'>
+        <span class = "close">&times;</span><br><br>
+        <form action = '/' method = 'POST'>
+        <div class = 'editdiv'>
+      <p id = 'poptitle' style = 'font-weight:bold;font-size:20px;'></p> 
+      <input type = 'text' name = 'origtitle' id ='origintil'>
+      <textarea name = 'edittitle' id ='editt' cols = '40'></textarea> <br>
+
+      <p id = 'popdesc' style = 'font-size:18px;'></p>
+      <input type = 'text' name = 'origdesc' id ='origindes'>
+      <textarea name = 'editdesc' id ='editd' cols = '40'></textarea><br>
+
+      <span style = 'font-weight:bold;font-size:20px;margin:10px;'>Priority: </span>
+      <span id = 'priorText'></span>
+      <input list = "prior" name = "imp"  style = 'padding:10px;width:100px;margin-top:4px;' class = 'inpprior' placeholder = 'Priority 1'>
+          <datalist id = "prior">
+            <option value = "Priority1"></option>
+            <option value = "Priority2"></option>
+            <option value = "Priority3"></option>
+            <option value = "Priority4"></option>
+          </datalist>
+        </div>
+        <button id = 'editsave' type = 'submit'>Save</button>
+        <button id = 'cancel'type = 'button' >Cancel</button>
+        <span style ='float:right;'>* Click on the elements to editing</span>
+      </form>
+      </div>
+    </div>
+    <div class = 'continue'>
+        <div class ='content'>
+            <h3 style = 'margin:10px;'>The changes you have made won't be saved! </h3><hr>
+            <p style = 'padding:10px;'>Do you still want to continue? Then Press Exit. Or to continue editing Press Cancel !</p><br><hr>
+           
+            <div class = 'footer'><button id = 'exit' type='button'>Exit</button><button id ='fincancel'>Cancel</button></div>
+        </div>
+    </div>
+  </body>
+<script type="text/javascript" src = 'todo.js'></script>
+</html>
