@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 const express = require('express');
 const server = express();
@@ -6,20 +7,20 @@ server.use(bodyparser.urlencoded({ extended:false }));
 
 server.set('view engine','ejs');
 
+
 var db,collection;
 
 //Connectinng to the DataBase//
 
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
-
 MongoClient.connect(url, (error,client) =>{
 
   if(error){
     return console.log("There was an error in connecting.." + error);
   }
-   db = client.db('test2');
-   collection = db.collection('todo');
+   db = client.db(process.env.Database);
+   collection = db.collection(process.env.collection);
   console.log("Connection Established !");
 });
 
@@ -75,10 +76,11 @@ else{
 // Deleting  a Task
   server.get('/delete', (req,res) =>{
 
-    let title = req.query.title;
+  let title = req.query.title;
   console.log("Oh this goes for the title name in mongo",title);
   console.log("Connection Established ! This is from the delete opeartion route !");
   const query = {title:title};
+
   collection.updateOne({$and:[query,{status:'pending'}]},{$set:{status:'done'}},(err,result) =>{
     if(err){
       return console.log("Sorry There is an error in updating",err);
@@ -105,8 +107,8 @@ server.get('/sort', (req,res) =>{
 });
 
 
-server.listen(1000, () =>{
-  console.log('Listening in the PORT:1000');
+server.listen(process.env.PORT, () =>{
+  console.log('Listening in the PORT:',process.env.PORT);
 });
 
 
