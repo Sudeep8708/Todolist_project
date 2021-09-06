@@ -2,7 +2,7 @@
 This is a simple TodoList with some pretty good features built-in to serve you ! Do check this out ! Hope you have a well-organised and productive day ahead ! :) 
 
 This is built by using _Vanilla JavaScript, HTML,CSS_ in **Frontend part** and _Node.js along with its framework_ _Express_ for the **Middleware** and **Backend part** and 
-_MongoDB_ as the **Database**.
+_MongoDB_ as the **Database**.(i.e) [MongoDB Node.js driver]
 
 This is my first FullStack Project. 
 Attempted to build this without using any kind of front-end frameworks.
