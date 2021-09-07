@@ -60,4 +60,4 @@ Now, you can use this todo to organise your day..Also, having your data in your 
 
 [Disclaimer]: This is not the final project, still some features are to add..
 
-Any kind of Criticism or appreciation can be send here [sudeepbrock@gmail.com]. Thanks in advance !!
+Thanks !
