@@ -36,7 +36,7 @@ Attempted to build this without using any kind of front-end frameworks.
  
  "mongodb": "^4.1.0"
  
-Seems good? Want to use it?
+Seems good? Do you want to give a try? THEN,
 
 First clone this to your local machine using ```git clone -u url```
 
