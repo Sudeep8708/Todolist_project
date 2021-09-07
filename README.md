@@ -19,6 +19,9 @@ Attempted to build this without using any kind of front-end frameworks.
 
 -> You can **Edit** the Title, Description, Priority of every task.
 
+-> Also, you can smash off the completed items from the list by clicking the checkbox.
+
+-> Some more features are yet to come..
 
 
 **The Dependencies that I have used to build this project are:**
@@ -33,3 +36,19 @@ Attempted to build this without using any kind of front-end frameworks.
  
  "mongodb": "^4.1.0"
  
+Seems good? Want to use it?
+
+First clone this to your local machine using ```git clone -u url```
+
+Open command line, drive to the cloned folder and type ```npm init``` to set up a new or existing npm package in the directory. or ```npm int -y``` to set default values to the package.json file.
+
+Then install the necessary dependencies mentioned above using ```npm i <dep_name>```
+
+Finally, create a .env file to store Global Variables like Dbname,Port and some.
+
+Download and Install MongoDB  from their official site.(i.e the Community Server)
+
+Then after all the installations, open a new terminal and type ```mongod``` to start the monogdb server.
+
+Then drive to the folder and run the script.js file using ```node script.js```
+
