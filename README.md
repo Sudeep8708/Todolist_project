@@ -44,11 +44,20 @@ Open command line, drive to the cloned folder and type ```npm init``` to set up 
 
 Then install the necessary dependencies mentioned above using ```npm i <dep_name>```
 
-Finally, create a .env file to store Global Variables like Dbname,Port and some.
+Finally, create a .env file to store Global Variables like Dbname,Port and some like the (key = value) way.
 
 Download and Install MongoDB  from their official site.(i.e the Community Server)
 
 Then after all the installations, open a new terminal and type ```mongod``` to start the monogdb server.
 
-Then drive to the folder and run the script.js file using ```node script.js```
+Then drive to the folder and run the script.js file using ```node script.js```.
 
+Visit to the url you had specified and the port in browser.
+
+Done !!
+
+Now, you can use this todo to organise your day..Also, having your data in your own PC. :)
+
+[Disclaimer]: This is not the final project, still some features are to add..
+
+Any kind of Criticism or appreciation can be send here [sudeepbrock@gmail.com]. Thanks in advance !!
