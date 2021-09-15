@@ -57,7 +57,6 @@ Visit to the url you had specified and the port in browser.
 Done !!
 
 Now, you can use this todo to organise your day..Also, having your data in your own PC. :)
-
-[Disclaimer]: This is not the final project, still some features are to add..
+Note: This is not the final project, still some features are to add..
 
 Thanks !
