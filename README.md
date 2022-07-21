@@ -12,17 +12,28 @@ Attempted to build this without using any kind of front-end frameworks.
 
 -> **Specify a Title** and **Description** for your Task to give you a clear insight of what do you really want to do.
 
+![pic](todo_1.png)
 
+![pic](adding_todo.png)
+
+![pic](todo_added.png)
 
 -> You have **Priorities** to prioritize each and every task.
 
 -> There are **tags to show the priority using different colors** of each and every task.
 
+
 -> Still Sick of scrolling between to know where the important task is? This has a feature of **Sorting the List using Priorities (High to Low)**. to save you.
+
+![pic](todo_prior.png)
 
 -> You can **Edit** the Title, Description, Priority of every task.
 
+![pic](todo_edit.png)
+
 -> Also, you can smash off the completed items from the list by clicking the checkbox.
+
+![pic](on_completion_todo.png)
 
 -> Some more features are yet to come..
 
